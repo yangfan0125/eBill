@@ -1,0 +1,41 @@
+<view class='container'>
+  <view class='top'>
+    <view class='top-left'>
+      <!-- <image src='/images/admin-icon.png'></image>
+       -->
+      <image src='{{avatarUrl}}'></image>
+       
+    </view>
+      <block wx:if="{{isLogin}}">
+        <view class='top-right-wrap' >
+            <view class='top-center'>{{sub}}</view>
+            
+        </view>  
+      </block>  
+      <block wx:else >
+        <navigator  url="/pages/login/login" class='top-right-wrap' >
+          <view class='top-center'>
+            <view class='login-wrap'>
+              <view class='login-text'> 登录/注册</view>
+            </view>
+            <view class='tip'>
+              登录后可以享受更多功能
+            </view>
+          </view>
+          <view class='top-right'>
+            <image src='/images/arrow-white.png'></image>      
+          </view>
+        </navigator>  
+          
+      </block>  
+      
+    
+  </view>
+  <navigator class='about-wrap' url='../about/about'>
+    <image src='/images/about.png' class='about-icon'></image>
+    <view class='about-text'>关于我们</view>
+    <image src='/images/arrow.png' class='arrow-icon'></image>
+    
+  </navigator>
+  <view class='logout' style="display:{{isLogin?'block':'none'}}" bindtap='loginOut'>退出登录</view>
+</view>

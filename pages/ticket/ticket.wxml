@@ -1,0 +1,62 @@
+<!-- ticket.wxml -->
+<view class='container'>
+  <view class='title'>浙江省财政电子票据</view>
+  <view class='info-top'>
+    <view class='info-wrap'>
+      <view class='info-item'>
+        <view class='item-title'>票据名称</view>
+        <view class='item-content'>{{billName}}</view>
+      </view>
+      <view class='info-item info-item-right'>
+        <view class='item-title'>校验码</view>
+        <view class='item-content'>{{checkCode}}</view>
+      </view>
+    </view>
+     <view class='info-wrap info-wrap-last'>
+      <view class='info-item'>
+        <view class='item-title'>票据代码</view>
+        <view class='item-content'>{{billNum}}</view>
+      </view>
+      <view class='info-item info-item-right'>
+        <view class='item-title'>票据号码</view>
+        <view class='item-content'>{{billCode}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='middle'>
+    <view class='line'></view>
+  </view>
+   <view class='info-top'>
+    <view class='info-wrap info-wrap-first'>
+      <view class='info-item'>
+        <view class='item-title'>收款单位</view>
+        <view class='item-content'>{{payee}}</view>
+      </view>
+      <view class='info-item info-item-right'>
+        <view class='item-title'>付款人（单位）</view>
+        <view class='item-content'>{{payer}}</view>
+      </view>
+    </view>
+     <view class='info-wrap info-wrap-last'>
+      <view class='info-item'>
+        <view class='item-title'>付款金额</view>
+        <view class='item-content'>￥{{payAmount}}</view>
+      </view>
+      <view class='info-item info-item-right'>
+        <view class='item-title'>开票时间</view>
+        <view class='item-content'>{{openTime}}</view>
+      </view>
+    </view>
+  </view>
+  <button class='bill-examine-btn' bindtap='examineBill' hover-class="bill-examine-hover">票据查看</button>
+  <view class='operator' bindtap='downBill'>
+    <view class='operator-text'>下载票据</view>
+    <view class='operator-info'>将票据下载到邮箱</view>
+    <image src='/images/arrow.png' class='arrow-icon'></image>
+  </view>
+  <view class='operator' bindtap='checkBill'>
+    <view class='operator-text' >查验票据</view>
+    <view class='operator-info'>验证票据真伪</view>
+    <image src='/images/arrow.png' class='arrow-icon'></image>
+  </view>
+</view>

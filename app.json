@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/result/result",
+    "pages/billcheck/billcheck",
+    "pages/email/email",
+    "pages/ticket/ticket",
+    "pages/vertify/vertify",  
+    "pages/collection/collection",
+    "pages/billdown/billdown",
+    "pages/login/login",
+    "pages/signup/signup",
+    "pages/protocal/protocal",
+    "pages/about/about",
+    
+    "pages/admin/admin"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "财政电子票据",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#017ae1",
+    "color": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeactive.png"
+      },
+      {
+        "pagePath": "pages/admin/admin",
+        "text": "我的",
+        "iconPath": "images/admin.png",
+        "selectedIconPath": "images/adminactive.png"
+      }
+    ]
+  }
+}

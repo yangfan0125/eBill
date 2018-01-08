@@ -1,0 +1,17 @@
+<!--vertify.wxml -->
+<import src="../../component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class='container'>
+   <form bindsubmit="urlSubmit">
+      <view class='form-item ebillUrl-wrap'>
+        <input placeholder='请输入电子票据URL' placeholder-class='form-item-place' name='ebillUrl' bindblur="ebillUrlBlur"></input>
+      </view>
+      <view class='url-tip'>必须以"http://"或"https://"开头</view>
+      <view class='file-btn'>
+        <button form-type="submit">验证版式</button>
+      </view>      
+    </form>
+  <include src="../../component/footer/footer.wxml"/> 
+</view>
+
+

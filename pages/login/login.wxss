@@ -1,0 +1,61 @@
+@import "../../component/footer/footer.wxss";
+
+page{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;  
+  padding-top: 40rpx;
+}
+.form-item{
+   width: 100%;
+    height: 100rpx;
+    border-top: 1px solid #dedede;
+    background: #fff;
+    display: flex;
+    line-height: 100rpx;
+    font-size: 32rpx;
+}
+.last-form-item{
+    border-bottom: 1px solid #dedede;
+}
+.form-item text{
+  color: #333;
+  margin-left: 20rpx;
+  text-align:justify;
+  text-align-last:justify;
+  width: 16%;
+}
+.input-place{
+  color: #999;
+}
+.form-item input{
+  flex: 1;
+  height: 100rpx;
+  margin-left: 10rpx;
+  
+}
+.login-btn{
+  background: #0071d9;
+  width: 710rpx;
+  height: 94rpx;
+  color: #fff;
+  margin: 100rpx auto;
+  font-size: 34rpx;
+  line-height: 94rpx;
+}
+.login-btn-hover{
+  opacity: .8;
+}
+.signup{
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #0071d9;
+}

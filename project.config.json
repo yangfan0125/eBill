@@ -1,0 +1,104 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.4",
+	"appid": "wx458cd586a5d82bad",
+	"projectname": "%E8%B4%A2%E6%94%BF%E7%94%B5%E5%AD%90%E7%A5%A8%E6%8D%AE",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "ticket",
+					"pathName": "pages/ticket/ticket",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "email",
+					"pathName": "pages/email/email",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "版式验证",
+					"pathName": "pages/vertify/vertify",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "票据归集",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "admin",
+					"pathName": "pages/admin/admin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "scan",
+					"pathName": "pages/scan/scan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "票据下载",
+					"pathName": "pages/billdown/billdown",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "票据查验",
+					"pathName": "pages/billcheck/billcheck",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/signup/signup",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册协议",
+					"pathName": "pages/protocal/protocal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/about/about",
+					"query": ""
+				}
+			]
+		}
+	}
+}

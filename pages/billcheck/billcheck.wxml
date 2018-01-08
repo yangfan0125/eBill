@@ -1,0 +1,69 @@
+<!-- billcheck.wxml -->
+<import src="../../component/toast/toast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">票据状态查询</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">票据信息查询</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 44}}px" bindchange="bindChange">
+  <!-- 票据状态查询 -->
+  <swiper-item>
+    <form bindsubmit="stateSubmit">
+      <view class='form-item billCode-wrap'>
+        <text>票据代码：</text>
+        <input placeholder='请输入8位票据代码' placeholder-class='form-item-place' name='billCode' bindblur="billCodeBlur" maxlength="8" type='number'></input>
+      </view>
+      <view class='form-item billNum-wrap'>
+        <text>票据号码：</text>
+        <input placeholder='请输入10位票据号码' placeholder-class='form-item-place' name='billNum' bindblur="billNumBlur" maxlength="10" type='number'></input>
+      </view>
+       <view class='form-item vCode-wrap'>
+        <text>验证码：</text>
+        <input placeholder='请输入验证码' placeholder-class='form-item-place' name='vCode' bindblur="vCodeBlur" maxlength="4" type='text'></input>
+        <image src='{{vCodeSrc}}' bindtap='vCodeSrc'></image>
+      </view> 
+      <view class='btn-wrap'>
+        <button form-type="reset">重置</button>
+        <button form-type="submit" >提交</button>
+      </view>
+     
+      
+    </form>
+  </swiper-item>
+  <!-- 票据信息查询 -->
+  <swiper-item>
+     <form bindsubmit="infoSubmit">
+      <view class='form-item billCode-wrap'>
+        <text>票据代码：</text>
+        <input placeholder='请输入8位票据代码' placeholder-class='form-item-place' name='billCode' bindblur="billCodeBlur" maxlength="8" type='number'></input>
+      </view>
+      <view class='form-item billNum-wrap'>
+        <text>票据号码：</text>
+        <input placeholder='请输入10位票据号码' placeholder-class='form-item-place' name='billNum' bindblur="billNumBlur" maxlength="10" type='number'></input>
+      </view>
+      <view class='form-item holdingUnit-wrap'>
+        <text>收款单位：</text>
+        <input placeholder='请输入收款单位' placeholder-class='form-item-place' name='holdingUnit' bindblur="holdingUnitBlur" ></input>
+      </view>
+      <view class='form-item payName-wrap'>
+        <text>缴款人：</text>
+        <input placeholder='请输入缴款人姓名' placeholder-class='form-item-place' name='payName' bindblur="payNameBlur"></input>
+      </view>
+      <view class='form-item totalAmount-wrap'>
+        <text>缴款金额：</text>
+        <input placeholder='请输入缴款金额' placeholder-class='form-item-place' name='totalAmount' bindblur="totalAmountBlur" type='digit'></input>
+      </view>
+      <!-- <view class='form-item vCode-wrap'>
+        <text>验证码：</text>
+        <input placeholder='请输入验证码' placeholder-class='form-item-place' name='vCode' bindblur="vCodeBlur" maxlength="4" type='number'></input>
+        <image src='{{vCodeSrc}}' bindtap='vCodeSrc'></image>
+      </view> -->
+      <view class='btn-wrap'>
+        <button form-type="reset">重置</button>
+        <button form-type="submit" >提交</button>
+      </view>      
+    </form>
+  </swiper-item>
+</swiper>
+<include src="../../component/footer/footer.wxml"/> 
+

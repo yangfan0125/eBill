@@ -1,0 +1,12 @@
+<!-- email.wxml -->
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view class='email-wrap'>
+      <text>邮箱地址：</text>
+      <input placeholder='请输入邮箱地址' placeholder-class='email-place' name='email' bindblur="emailBlur"></input>
+    </view>
+    <view class='tips'>报销、作废之后需重新下载票据</view>
+     <button class='send-btn' hover-class="send-btn-hover" formType="submit" disabled="{{forbidden?true:false}}">发送</button>     
+  </form>  
+  <include src="../../component/footer/footer.wxml"/> 
+</view>

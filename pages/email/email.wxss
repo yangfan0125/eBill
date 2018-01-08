@@ -1,0 +1,54 @@
+/* email.wxss */
+@import "../../component/footer/footer.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  font-family: "微软雅黑";
+}
+.container{
+  padding-top: 40rpx;
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  height: auto;
+}
+.email-wrap{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  background: #fff;
+  display: flex;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  
+}
+.email-wrap text{
+  color: #333;
+  margin-left: 20rpx;
+}
+.email-wrap input{
+  flex: 1;
+  height: 100rpx;
+}
+.email-place{
+  color: #999;
+}
+.tips{
+  font-size: 28rpx;
+  color: #787878;
+  padding-left: 20rpx;
+  margin-top: 10rpx;
+}
+.send-btn{
+  background: #EF4939;
+  width: 710rpx;
+  height: 94rpx;
+  color: #fff;
+  margin: 100rpx auto;
+  font-size: 34rpx;
+  line-height: 94rpx;
+}
+.send-btn-hover{
+  opacity: .8;
+}

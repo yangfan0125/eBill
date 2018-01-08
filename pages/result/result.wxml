@@ -1,0 +1,81 @@
+<!-- unreimbursed.wxml -->
+<view class='container'>
+  <view class='state-wrap'>
+    
+    <block wx:if="{{billState=='未报销'}}">
+      <view class='notyet-icon'>
+        <image src='{{stateIcon}}'></image>
+      </view>
+      <view class='state'>{{billState}}</view>
+      <view class='state-time'>该票据于{{year}}年{{month}}月{{day}}日{{billAction}}</view>
+    </block>
+    <block wx:elif="{{billState=='无此票据'}}">
+      <view class='notyet-icon'>
+        <image src='{{stateIcon}}'></image>
+      </view>
+      <view class='state'>{{billState}}</view>
+      <view class='state-time'>未查到票据,请确认输入信息无误。</view>      
+    </block>
+    <block wx:elif="{{billState=='已报销'||billState=='已作废'}}">
+      <view class='notyet-icon'>
+        <image src='{{stateIcon}}'></image>
+      </view>
+      <view class='state'>{{billState}}</view>
+      <view class='state-time'>该票据于{{year}}年{{month}}月{{day}}{{billState}}</view>      
+    </block>
+    <block wx:elif="{{billState=='作废票据报销'}}">
+      <view class='notyet-icon'>
+        <image src='{{stateIcon}}'></image>
+      </view>
+      <view class='state'>{{billState}}</view>
+      <view class='state-time'>该票据于{{year}}年{{month}}月{{day}}{{billAction}}</view>      
+    </block>
+    <block wx:elif="{{billState=='重复作废'||billState=='重复报销'}}">
+      <view class='notyet-icon'>
+        <image src='{{stateIcon}}'></image>
+      </view>
+      <view class='state'>{{billState}}</view>
+      <view class='state-time'>该票据于{{year}}年{{month}}月{{day}}{{billState}}</view>      
+    </block>
+    
+  </view>
+  <block wx:if="{{billState=='无此票据'}}">
+    <view class='blank'>
+      <image src='/images/blank.png'></image>
+    </view>  
+  </block>    
+  <block wx:else>
+  <view  class='content-wrap'>
+      <view class='icon-wrap'>
+        <view class='time-icon'>
+          <image src='/images/time-icon.png'></image>
+          <view class='time-title'>
+            时间
+          </view>
+        </view>
+        <view class='ip-icon'>
+          <image src='/images/ip-icon.png'></image>
+          <view class='ip-title'>
+            IP
+          </view>
+        </view>
+        <view class='state-icon'>
+          <image src='/images/state-icon.png'></image>
+          <view class='state-title'>
+            状态
+          </view>
+        </view>
+      </view>
+     <scroll-view scroll-y style="height: 80%;"  bindscrolltolower="lower"> 
+      <view class='content'>
+        <view class='content-item' wx:for="{{content}}">
+          <view class='time-text'>{{item.createTime}}</view>
+          <view class='ip-text'>{{item.ipAddress}}</view>
+          <view class='state-text'>{{item.billAction}}</view>
+        </view>
+      </view>
+     </scroll-view> 
+  </view>  
+  </block>  
+  <include src="../../component/footer/footer.wxml"/>    
+</view>

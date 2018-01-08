@@ -1,0 +1,32 @@
+<view class='container'>
+   <form bindsubmit="formSubmit">
+      <view class='form-item'>
+       <text>手机号</text> ：
+       <input name='userLoginName' placeholder='请输入手机号码' placeholder-class='input-place' bindblur='userLoginNameBlur' type='number' maxlength='11'></input>
+      </view>  
+      <view class='form-item '>
+       <text>身份证号</text> ：
+       <input name='userIdNum' placeholder='请输入身份证号码' placeholder-class='input-place' type='idcard' maxlength='18' bindblur='userIdNumBlur'></input>
+      </view> 
+      <view class='form-item'>
+        <text> 密码</text> ：
+        <input type='password' class='password' name='userPassword' placeholder='请输入密码'  placeholder-class='input-place' bindblur='userPasswordBlur'></input>
+      </view>
+      <view class='form-item  last-form-item'>
+        <text>确认密码</text> ：
+        <input type='password' class='password' name='userPassword2' placeholder='请再次输入密码'  placeholder-class='input-place' bindblur='userPasswordBlur2'></input>
+      </view>
+      <view class='protocal'>
+        <view class='radio'>
+          <icon wx:if="{{selected}}" type="success_circle" size="20" bindtap="bindCheckbox"class="my-check" color='#0071d9'/>
+          <icon wx:else type="circle" size="20" bindtap="bindCheckbox"  class="my-check"/>
+        </view>  
+        <view class='protocal-text'>我已认真阅读协议，并同意接受<navigator url='../protocal/protocal'>用户注册协议</navigator>
+        
+        </view>
+      </view>
+    <button formType="submit" class='login-btn'>注册</button>
+  </form>  
+  <navigator class='login' url='../login/login'>马上登陆</navigator> 
+  <include src="../../component/footer/footer.wxml"/> 
+</view>

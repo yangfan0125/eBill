@@ -1,0 +1,147 @@
+/* collection.wxss */
+@import "../../component/footer/footer.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  font-family: "微软雅黑";
+}
+.container{
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  height: auto;
+}
+.item{
+  width: 100%;
+  height: auto;
+  margin-bottom: 40rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding: 20rpx 0;
+  background: #fff;
+  display: flex;  
+  
+}
+.content-wrap{
+  padding: 0 30rpx;
+  box-sizing: border-box;  
+  width: 100%;
+  display: flex;
+  color: #999999;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+.label{
+  width: 22%;
+  text-align: justify;
+  text-align-last: justify;
+}
+.value{
+  width: 80%;
+  text-align: right;
+}
+.operation-wrap{
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;  
+  font-size: 32rpx;
+  color: #0071d9;
+  text-align: center;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;  
+}
+.examine,.download{
+  width: 50%;
+  box-sizing: border-box;
+}
+.examine{
+  border-right: 1px solid #dedede;
+}
+.item-left{
+  width: 7%;
+}
+.item-right{
+  flex: 1;
+}
+.checkbox{
+  height: 268px;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 40rpx;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+}
+.checkbox .check{
+ align-items:center;
+ justify-content: center;
+ display: flex;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0 0 0 20rpx;
+  box-sizing: border-box;
+  font-size: 34rpx;
+  
+}
+.checkall{
+  height: 100%;
+  line-height: 100rpx;
+  width: 50%;
+  display: flex;
+  color: #999;
+  font-size: 34rpx;
+}
+.l-mycheck{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 20rpx;
+}
+.downbtn{
+  width: 300rpx;
+  background: #FF6F02;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+}
+.my-check{
+   display:flex;
+  align-items:center;
+  justify-content: center;
+  height:100%;
+}
+.blank-wrap{
+  width: 100%;
+  height: 100%;
+  padding: 60rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction:column;
+}
+.blank-icon{
+  display: block;
+  width: 280rpx;
+  height: 280rpx;
+}
+.blank-text{
+  margin-top: 30rpx;
+}

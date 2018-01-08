@@ -1,0 +1,78 @@
+/* billcheck.wxss */
+@import '../../component/toast/toast.wxss';
+@import "../../component/footer/footer.wxss";
+
+page{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+}
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 50%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+
+.form-item{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #dedede;
+  background: #fff;
+  display: flex;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+.billCode-wrap{
+  border-top: none;
+}
+.vCode-wrap{
+  border-bottom: 1px solid #dedede;
+}
+.btn-wrap{
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 30rpx;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 100rpx;
+}
+.btn-wrap button{
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  width: 50%;
+  background: #0071d9;
+  margin: 0 20rpx;
+  box-sizing: border-box;
+}
+.form-item text{
+  color: #333;
+  margin-left: 20rpx;
+  width:150rpx;
+}
+.form-item input{
+  flex: 1;
+  height: 100rpx;
+}
+.form-item-place{
+  color: #999;
+}
+.vCode-wrap image{
+  display: block;
+  width: 168rpx;
+  height: 72rpx;
+  margin: 14rpx 20rpx;
+
+}

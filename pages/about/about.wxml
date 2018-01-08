@@ -1,0 +1,27 @@
+<view class='container'>
+  <view class='qrcode'>
+    <image src='/images/e-qrcode.jpg'></image>
+  </view>
+  <view class='info'>
+    <view class='item'>
+      <view class='icon'>
+        <image src='/images/phone.png'></image>
+      </view>
+      <view class='text'>全国热线：95113</view>
+    </view>
+     <view class='item'>
+      <view class='icon'>
+        <image src='/images/fax.png'></image>
+      </view>
+      <view class='text'>传真：(+8610)88896888</view>
+    </view>
+     <view class='item'>
+      <view class='icon'>
+        <image src='/images/address.png'></image>
+      </view>
+      <view class='text'>浙江省杭州市西湖区万塘路30号高新科技园12楼2层</view>
+    </view>
+  </view>
+ <include src="../../component/footer/footer.wxml"/> 
+
+</view>

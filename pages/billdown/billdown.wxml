@@ -1,0 +1,63 @@
+<block wx:if="{{blank==true}}">
+  <view class='blank-wrap'>
+    <image src='/images/blank.png' class='blank-icon'></image>  
+    <view class='blank-text'>暂无数据</view>
+    <include src="../../component/footer/footer.wxml"/> 
+  </view>  
+</block>  
+<block wx:else>
+  <scroll-view style="height: 90%;" scroll-y  bindscrolltolower="lower">
+    <view class="container">
+        <view class='item' wx:for="{{list}}" wx:key="index">
+          <view class='item-left'>
+            <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+            <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" class="my-check"/>
+          </view>
+          <view class='item-right'> 
+            <view class='content-wrap'>
+              <view class='label'>票据名称</view>
+              <view class='value'>{{item.billName}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>票据代码</view>
+              <view class='value'>{{item.billCode}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>票据号码</view>
+              <view class='value'>{{item.billNum}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>开票日期</view>
+              <view class='value'>{{item.createTime}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>执收单位</view>
+              <view class='value'>{{item.holdingUnit}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>缴款人</view>
+              <view class='value'>{{item.payName}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>金额</view>
+              <view class='value'>￥{{item.totalAmount}}</view>
+            </view>
+            <view class='content-wrap'>
+              <view class='label'>状态</view>
+              <view class='value'>{{item.billStatus}}</view>
+            </view>
+          </view>       
+        </view>
+    </view>
+  </scroll-view>  
+  <view class='bottom'>
+    <view bindtap="bindSelectAll" class="checkall" >
+      <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" class="l-mycheck"/>
+      <icon wx:else type="circle" size="20" class="l-mycheck"/>
+      <text>全选</text>
+    </view>
+    <view class='downbtn' bindtap='down'>下载</view>
+  </view>
+</block>  
+
+

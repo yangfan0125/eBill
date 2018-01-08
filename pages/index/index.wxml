@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='banner' bindtap="scan">
+    <view class='banner-text1'>电子票据秒变真伪</view>
+    <view class='banner-text2'>个人票据归集，一键下载</view>
+    <view class='scan-btn'>扫一扫</view>
+    <view class='banner-text3'>扫码票据上二维码即可验真伪</view>
+  </view>
+  <view class='content'>
+    <navigator class='item check' url="/pages/billcheck/billcheck">
+      <image src='/images/bill-check.png' class='item-icon'></image>
+      <view class='item-text'>票据查验</view>
+      <image src='/images/arrow.png' class='arrow-icon'></image> 
+    </navigator>
+    <navigator class='item collection' url="/pages/collection/collection">
+      <image src='/images/bill-collection.png' class='item-icon'></image>
+      <view class='item-text'>票据归集</view>
+      <image src='/images/arrow.png' class='arrow-icon'></image> 
+    </navigator>
+    <navigator class='item down' url="/pages/billdown/billdown">
+      <image src='/images/bill-down.png' class='item-icon'></image>
+      <view class='item-text'>票据下载</view>
+      <image src='/images/arrow.png' class='arrow-icon'></image> 
+    </navigator>
+    <navigator class='item vertify'url="/pages/vertify/vertify">
+      <image src='/images/bill-vertify.png' class='item-icon'></image>
+      <view class='item-text'>版式验证</view>
+      <image src='/images/arrow.png' class='arrow-icon'></image> 
+    </navigator>
+  </view>
+</view>
